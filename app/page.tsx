@@ -1,8 +1,10 @@
 'use client'
 
 import { useState } from 'react'
+import Image from 'next/image'
 import IngredientForm from '@/components/IngredientForm'
 import RecipeCard from '@/components/RecipeCard'
+import heroImage from '../image3.png'
 
 interface Recipe {
   title: string
@@ -56,6 +58,18 @@ export default function Home() {
             Tell us what ingredients you have, and we'll create a fun recipe!
           </p>
         </header>
+
+        <div className="mb-10 flex justify-center">
+          <div className="relative w-full max-w-3xl h-56 md:h-72 lg:h-80">
+            <Image
+              src={heroImage}
+              alt="Cartoon cow and pig cooking together in a colorful kitchen"
+              fill
+              className="object-cover rounded-3xl shadow-lg"
+              priority
+            />
+          </div>
+        </div>
 
         <IngredientForm onSubmit={handleSubmit} isLoading={isLoading} />
 

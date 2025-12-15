@@ -4,7 +4,6 @@ import { useState } from 'react'
 import Image from 'next/image'
 import IngredientForm from '@/components/IngredientForm'
 import RecipeCard from '@/components/RecipeCard'
-import heroImage from '../image3.png'
 
 interface Recipe {
   title: string
@@ -62,7 +61,7 @@ export default function Home() {
         <div className="mb-10 flex justify-center">
           <div className="relative w-full max-w-3xl h-56 md:h-72 lg:h-80">
             <Image
-              src={heroImage}
+              src="/image3.png"
               alt="Cartoon cow and pig cooking together in a colorful kitchen"
               fill
               className="object-cover rounded-3xl shadow-lg"
